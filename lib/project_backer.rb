@@ -2,23 +2,21 @@
 require 'pry'
 
 class ProjectBacker
- attr_reader :project, :backer
-  @@all=[]
 
-  def initialize (project, backer)
-    @project=project
-    @backer=backer
-    @@all<<self 
-  end 
-    
-  def  self.all
+  @@all = []
 
-    @@all 
+  attr_reader :project, :backer
 
-  end 
+  def initialize(project, backer)
+    @project = project
+    @backer = backer
+    @@all << self
+  end
   
+  def self.all
+    return @@all
+  end
 
 
-  #binding.pry
 
 end
