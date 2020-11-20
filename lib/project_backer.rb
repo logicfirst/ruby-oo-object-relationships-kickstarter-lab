@@ -1,22 +1,17 @@
-
-require 'pry'
-
 class ProjectBacker
 
-  @@all = []
-
   attr_reader :project, :backer
+
+  @@all = []
 
   def initialize(project, backer)
     @project = project
     @backer = backer
-    @@all << self
+    self.class.all << self
   end
-  
+
   def self.all
-    return @@all
+    @@all
   end
-
-
 
 end
